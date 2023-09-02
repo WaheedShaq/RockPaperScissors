@@ -8,7 +8,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="header-container">
+      <h1 class="header">Rock Paper Scissors!</h1>
+    </div>
+
+    <h1 class="choose-header">Choose :)</h1>
+    <button id="play-again-btn" class="play-again-btn">Play Again!</button>
+    <div class="choice-container">
+      <div class="player-choice">Player chose:</div>
+      <h2 id="player-choice-text"></h2>
+      <span>/</span>
+      <div class="computer-choice">Computer chose:</div>
+      <h2 id="computer-choice-text"></h2>
+    </div>
+
+    <div class="images-container">
+      <button class="rock-btn"></button>
+      <button class="paper-btn"></button>
+      <button class="scissors-btn"></button>
+    </div>
+
+    <div class="round-counter">Round <span id="round-number-DOM">1</span></div>
+
+    <div class="counter-container">
+      <div class="player-score">Player Score</div>
+
+      <div class="computer-score">Computer Score</div>
+    </div>
+    <div class="rounds-played">
+      <div id="player-round">0</div>
+      <div id="computer-round">0</div>
+    </div>
+    <footer class="footer">Made by Waheed on The Odin Project © 2023</footer>
+
     <script src="script.js"></script>
-    <h1>Yes it works</h1>
   </body>
 </html>

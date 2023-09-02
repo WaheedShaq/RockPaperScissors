@@ -19,7 +19,6 @@ function getComputerChoice() {
 
 let result;
 function playRound(computerChoice, playerChoose) {
-  roundNumber++;
   console.log(
     `Computer Choice is ${computerChoice} and Player Choice is ${playerChoose}`
   );
@@ -52,21 +51,37 @@ function playRound(computerChoice, playerChoose) {
 
   let chooseHeader = document.querySelector('.choose-header');
 
-  if (roundNumber === 5 && playerScore === 5) {
+  // if (roundNumber === 5 && playerScore === 5) {
+  //   chooseHeader.textContent = 'Player Won!';
+  //   playerScoreDOM.textContent = 0;
+  //   computerScoreDOM.textContent = 0;
+  //   roundNumber = 0;
+  //   playAgainBtn.style.display = 'block';
+  // } else if (roundNumber === 5 && computerScore === 5) {
+  //   chooseHeader.textContent = 'Computer Won!';
+  //   playerScoreDOM.textContent = 0;
+  //   computerScoreDOM.textContent = 0;
+  //   roundNumber = 0;
+  //   playAgainBtn.style.display = 'block';
+  // } else if (roundNumber === 5 && computerScore === 5)
+  //   roundNumberDOM.textContent = roundNumber;
+  if (roundNumber === 4 && playerScore > computerScore) {
+    console.log('player wins');
     chooseHeader.textContent = 'Player Won!';
     playerScoreDOM.textContent = 0;
     computerScoreDOM.textContent = 0;
     roundNumber = 0;
-    playAgainBtn.style.display = 'block';
-  } else if (roundNumber === 5 && computerScore === 5) {
+  } else if (roundNumber === 4 && playerScore < computerScore) {
+    console.log('computer wins');
     chooseHeader.textContent = 'Computer Won!';
     playerScoreDOM.textContent = 0;
     computerScoreDOM.textContent = 0;
     roundNumber = 0;
-    playAgainBtn.style.display = 'block';
-  } else if (roundNumber === 5 && computerScore === 5)
-    roundNumberDOM.textContent = roundNumber;
-  console.log(roundNumber);
+  } else if (roundNumber === 4 && playerScore === computerScore) {
+    console.log('it s draw');
+  }
+  roundNumber++;
+  roundNumberDOM.textContent = roundNumber; // this is it
 }
 
 let playerChoose = '';

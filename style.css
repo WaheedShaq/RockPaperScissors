@@ -10,7 +10,7 @@
   font-weight: bold;
   margin-top: 30px;
   margin-bottom: 40px;
-  font-size: 40px;
+  font-size: 100px;
 }
 
 .header-container {
@@ -36,7 +36,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 
 body {
@@ -52,22 +52,25 @@ button {
 .counter-container {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  gap: 100px;
+  margin-top: 400px;
+  margin-left: 200px;
+  gap: 150px;
 }
 
 .player-score {
-  font-size: 50px;
+  font-size: 100px;
 }
 
 .computer-score {
-  font-size: 50px;
+  font-size: 100px;
 }
 
 .round-counter {
   text-align: center;
   font-size: 50px;
-  margin-top: 50px;
+  margin-top: 200px;
+  margin-left: 100px;
+  font-size: 70px;
 }
 
 span {
@@ -86,8 +89,8 @@ span {
 .choice-container {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  gap: 300px;
+  margin-top: 70px;
+  gap: 100px;
   font-size: 75px;
 }
 
@@ -117,12 +120,26 @@ span {
   text-align: center;
   background-color: #1f2937;
   font-size: 50px;
-  margin-top: 50px;
+  margin-top: 435px;
   padding: 30px;
   color: yellow;
-  bottom: 0;
 }
 
 .play-again-btn {
   display: none;
+}
+
+.score-span {
+  font-size: 100px;
+}
+
+#computer-round,
+#player-round {
+  font-size: 100px;
+}
+
+#player-choice-text,
+#computer-choice-text {
+  font-size: 75px;
+  color: yellow;
 }

@@ -1,4 +1,5 @@
 // let choices = ['rock', 'paper', 'scissors'];
+let result;
 
 function getComputerChoice() {
   let choices = ['rock', 'paper', 'scissors'];
@@ -17,7 +18,6 @@ function getComputerChoice() {
   }
 }
 
-let result;
 function playRound(computerChoice, playerChoose) {
   console.log(
     `Computer Choice is ${computerChoice} and Player Choice is ${playerChoose}`
@@ -102,73 +102,48 @@ let playerScoreDOM = document.querySelector('#player-round');
 let computerScoreDOM = document.querySelector('#computer-round');
 let roundNumberDOM = document.querySelector('#round-number-DOM');
 
-rockBtn.addEventListener('click', playerChooseRock);
-paperBtn.addEventListener('click', playerChoosePaper);
-scissorsBtn.addEventListener('click', playerChooseScissors);
+rockBtn.addEventListener('click', playerChoice);
+paperBtn.addEventListener('click', playerChoice);
+scissorsBtn.addEventListener('click', playerChoice);
 
-function playerChooseRock() {
+// function playerChooseRock() {
+//   if (rockBtn) {
+//     playerChoose = 'rock';
+//     playerRoundChoice.textContent = playerChoose;
+//     playRound(getComputerChoice(), playerChoose);
+//   }
+// }
+
+// function playerChoosePaper() {
+//   if (paperBtn) {
+//     playerChoose = 'paper';
+//     playerRoundChoice.textContent = playerChoose;
+
+//     playRound(getComputerChoice(), playerChoose);
+//   }
+// }
+
+// function playerChooseScissors() {
+//   if (scissorsBtn) {
+//     playerChoose = 'scissors';
+//     playerRoundChoice.textContent = playerChoose;
+//     playRound(getComputerChoice(), playerChoose);
+//   }
+// }
+
+function playerChoice() {
   if (rockBtn) {
     playerChoose = 'rock';
     playerRoundChoice.textContent = playerChoose;
-    playRound(getComputerChoice(), playerChoose);
-
-    // if (result === 'Computer wins!') {
-    //   computerScore += 1;
-
-    //   console.log(`Computer score is: ${computerScore}`);
-    // } else if (result === 'Player wins!') {
-    //   playerScore += 1;
-    //   console.log(`Player score is: ${playerScore}`);
-    // } else if (result === "It's a tie!") {
-    //   playerScore += 1;
-    //   computerScore += 1;
-    //   console.log(
-    //     `It's a tie so player score is ${playerScore} and computer score is ${computerScore}`
-    //   );
-    // }
   }
-}
-
-function playerChoosePaper() {
-  if (paperBtn) {
-    playerChoose = 'paper';
-    playerRoundChoice.textContent = playerChoose;
-
-    playRound(getComputerChoice(), playerChoose);
-    // if (result === 'Computer wins!') {
-    //   computerScore += 1;
-    //   console.log(`Computer score is: ${computerScore}`);
-    // } else if (result === 'Player wins!') {
-    //   playerScore += 1;
-    //   console.log(`Player score is: ${playerScore}`);
-    // } else if (result === "It's a tie!") {
-    //   playerScore += 1;
-    //   computerScore += 1;
-    //   console.log(
-    //     `It's a tie so player score is ${playerScore} and computer score is ${computerScore}`
-    //   );
-    // }
-  }
-}
-
-function playerChooseScissors() {
   if (scissorsBtn) {
     playerChoose = 'scissors';
     playerRoundChoice.textContent = playerChoose;
-    playRound(getComputerChoice(), playerChoose);
-
-    // if (result === 'Computer wins!') {
-    //   computerScore += 1;
-    //   console.log(`Computer score is: ${computerScore}`);
-    // } else if (result === 'Player wins!') {
-    //   playerScore += 1;
-    //   console.log(`Player score is: ${playerScore}`);
-    // } else if (result === "It's a tie!") {
-    //   playerScore += 1;
-    //   computerScore += 1;
-    //   console.log(
-    //     `It's a tie so player score is ${playerScore} and computer score is ${computerScore}`
-    //   );
-    // }
   }
+
+  if (paperBtn) {
+    playerChoose = 'paper';
+    playerRoundChoice.textContent = playerChoose;
+  }
+  playRound(getComputerChoice(), playerChoose);
 }
